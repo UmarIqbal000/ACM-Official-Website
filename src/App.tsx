@@ -29,13 +29,6 @@ interface Event {
   status: 'upcoming' | 'past';
 }
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-  linkedin: string;
-}
-
 // ==================== DATA ====================
 const navLinks: NavLink[] = [
   { name: 'Home', href: '/' },
@@ -153,15 +146,6 @@ const FlagshipIcon = ({ type }: { type: string }) => {
       return null;
   }
 };
-
-const _teamMembers: TeamMember[] = [
-  { name: 'Rahul Sharma', role: 'Chairperson', image: 'https://ui-avatars.com/api/?name=Rahul+Sharma&background=2563EB&color=ffffff&size=200', linkedin: '#' },
-  { name: 'Priya Singh', role: 'Vice Chair', image: 'https://ui-avatars.com/api/?name=Priya+Singh&background=0EA5E9&color=ffffff&size=200', linkedin: '#' },
-  { name: 'Amit Kumar', role: 'Technical Lead', image: 'https://ui-avatars.com/api/?name=Amit+Kumar&background=2563EB&color=ffffff&size=200', linkedin: '#' },
-  { name: 'Neha Verma', role: 'Design Lead', image: 'https://ui-avatars.com/api/?name=Neha+Verma&background=0EA5E9&color=ffffff&size=200', linkedin: '#' },
-  { name: 'Arjun Patel', role: 'PR & Marketing', image: 'https://ui-avatars.com/api/?name=Arjun+Patel&background=2563EB&color=ffffff&size=200', linkedin: '#' },
-  { name: 'Sneha Gupta', role: 'Event Coordinator', image: 'https://ui-avatars.com/api/?name=Sneha+Gupta&background=0EA5E9&color=ffffff&size=200', linkedin: '#' },
-];
 
 const galleryImages = [
   { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400', alt: 'Tech Event' },
