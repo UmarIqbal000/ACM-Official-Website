@@ -154,7 +154,7 @@ const FlagshipIcon = ({ type }: { type: string }) => {
   }
 };
 
-const teamMembers: TeamMember[] = [
+const _teamMembers: TeamMember[] = [
   { name: 'Rahul Sharma', role: 'Chairperson', image: 'https://ui-avatars.com/api/?name=Rahul+Sharma&background=2563EB&color=ffffff&size=200', linkedin: '#' },
   { name: 'Priya Singh', role: 'Vice Chair', image: 'https://ui-avatars.com/api/?name=Priya+Singh&background=0EA5E9&color=ffffff&size=200', linkedin: '#' },
   { name: 'Amit Kumar', role: 'Technical Lead', image: 'https://ui-avatars.com/api/?name=Amit+Kumar&background=2563EB&color=ffffff&size=200', linkedin: '#' },
