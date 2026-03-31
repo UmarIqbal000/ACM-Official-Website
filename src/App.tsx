@@ -147,16 +147,7 @@ const FlagshipIcon = ({ type }: { type: string }) => {
   }
 };
 
-const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400', alt: 'Tech Event' },
-  { src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400', alt: 'Workshop' },
-  { src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400', alt: 'Team Collaboration' },
-  { src: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=400', alt: 'Hackathon' },
-  { src: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400', alt: 'Conference' },
-  { src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400', alt: 'Presentation' },
-  { src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400', alt: 'Networking' },
-  { src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400', alt: 'Coding Session' },
-];
+
 
 const sponsors = [
   { name: 'IILM University, Greater Noida', logo: '/IILM UNIVERSITY LOGO 02.png' },
@@ -441,13 +432,7 @@ const Footer = () => {
             <Link to="/contact">Join Us</Link>
           </div>
 
-          <div className="footer-links">
-            <h4>Resources</h4>
-            <a href="#">Blog</a>
-            <a href="#">Learning Resources</a>
-            <a href="#">Tech Articles</a>
-            <a href="#">Tutorials</a>
-          </div>
+
 
           <div className="footer-social">
             <h4>Connect With Us</h4>
@@ -811,15 +796,8 @@ const GalleryPage = () => {
             here's a glimpse of our amazing journey.
           </p>
 
-          <div className="gallery-grid large">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="gallery-item" style={{ animationDelay: `${index * 0.1}s` }}>
-                <img src={image.src} alt={image.alt} loading="lazy" />
-                <div className="gallery-overlay">
-                  <span>{image.alt}</span>
-                </div>
-              </div>
-            ))}
+          <div style={{ textAlign: 'center', padding: '4rem 2rem' }}>
+            <h3 style={{ fontSize: '2.5rem', fontFamily: 'Space Grotesk, sans-serif', color: 'var(--gray-400)' }}>Coming soon...</h3>
           </div>
         </div>
       </section>
@@ -867,21 +845,27 @@ const ContactPage = () => {
 
               <div className="contact-details">
                 <div className="contact-item">
-                  <span className="contact-icon">📧</span>
+                  <span className="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </span>
                   <div>
                     <h4>Email</h4>
                     <p>acm@iilm.edu</p>
                   </div>
                 </div>
                 <div className="contact-item">
-                  <span className="contact-icon">📍</span>
+                  <span className="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </span>
                   <div>
                     <h4>Location</h4>
                     <p>IILM University, Greater Noida</p>
                   </div>
                 </div>
                 <div className="contact-item">
-                  <span className="contact-icon">🌐</span>
+                  <span className="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  </span>
                   <div>
                     <h4>Social</h4>
                     <div className="social-icons small">
@@ -908,9 +892,11 @@ const ContactPage = () => {
             <div className="contact-form-wrapper">
               <h3>Join Our Chapter</h3>
               {submitted ? (
-                <div className="success-message">
-                  <span>✅</span>
-                  <p>Thank you! We'll get back to you soon.</p>
+                <div className="success-message" style={{ textAlign: 'center', padding: '2rem 0' }}>
+                  <span style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem', color: '#10B981' }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </span>
+                  <p style={{ color: 'var(--text-main)', fontSize: '1.25rem', fontWeight: 500 }}>Thank you! We'll get back to you soon.</p>
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
